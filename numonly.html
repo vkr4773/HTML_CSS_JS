@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+function numOnly(e) {
+//alert(e.which);
+
+if(!(e.which>=48 && e.which<=57))
+{
+e.preventDefault();
+}
+}
+
+
+</script>
+
+</head>
+<body>
+ 
+<input type="text"  onkeypress="numOnly(event)" name=""  id="txtnum" maxlength="10">
+ 
+<input type="submit">
+
+</body>
+</html>

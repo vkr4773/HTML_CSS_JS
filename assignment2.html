@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+      li{
+      margin-bottom:15px;
+      }
+      li.pointer {
+      cursor: pointer;
+      }
+      li:hover {
+      background-color: #ccc;
+      }
+    </style>
+
+	<script language="JavaScript">
+  function noNumerics(evt)
+    {
+    var e = event || evt;
+    var charCode = e.which || e.keyCode;
+    if ((charCode >= 48) && (charCode <= 57))
+       return false;
+    return true;
+    }
+
+    function hideimage()
+    {
+    	 var x = document.getElementById("img1");
+  if (x.style.visiblity === "hidden") 
+  {
+    x.style.visiblity = "visible";
+  }
+   else 
+   {
+    x.style.display = "none";
+ 	 }
+  }
+
+ /* function printMousePos(event) {
+  document.body.textContent =
+    "clientX: " + event.clientX +
+    " - clientY: " + event.clientY;
+}
+
+document.addEventListener("click", printMousePos);
+*/
+function myFunction() {
+  window.open("https://www.w3schools.com");
+}
+
+</script>
+</head>
+
+<body>
+
+Caps only: <input id="yourid" style="text-transform: uppercase" type="text" onkeypress="return noNumerics();"/>
+</br>
+Alphabets: <input id="yourid" type="text" onkeypress="return noNumerics();"/>
+</br></br>
+
+<img src="Notebook.jpg" alt="Smiley face" align="left" id="img1" onclick ="hideimage()">
+
+</br>
+
+<p>Click the button to open a new browser window.</p>
+
+<button  onclick="myFunction()" >w3school</button>
+
+
+
+</body>
+
+</html>
